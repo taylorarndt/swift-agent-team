@@ -1,0 +1,34 @@
+{
+  "name": "swift-agents",
+  "description": "16 specialized Swift agents for Claude Code and VS Code Copilot. Covers concurrency, SwiftUI, Core ML, Foundation Models, MLX Swift, on-device AI, accessibility, security, testing, App Store review, Meta glasses SDK, SwiftData, visionOS, StoreKit 2, and performance.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Taylor Arndt",
+    "url": "https://github.com/taylorarndt"
+  },
+  "repository": "https://github.com/Techopolis/swift-agents",
+  "homepage": "https://github.com/Techopolis/swift-agents",
+  "keywords": [
+    "swift",
+    "ios",
+    "macos",
+    "visionos",
+    "swiftui",
+    "swiftdata",
+    "storekit",
+    "concurrency",
+    "coreml",
+    "mlx",
+    "realitykit",
+    "performance",
+    "accessibility",
+    "security",
+    "testing",
+    "app-store"
+  ],
+  "components": {
+    "agents": "agents/",
+    "hooks": "hooks/",
+    "settings": "settings.json"
+  }
+}

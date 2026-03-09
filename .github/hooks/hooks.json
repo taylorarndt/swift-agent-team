@@ -1,0 +1,37 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat <<'HOOK_OUTPUT'\nINSTRUCTION: MANDATORY SWIFT TEAM CHECK\nBefore proceeding with any task involving Swift code, SwiftUI views, UIKit\nviews, async/await, actors, Sendable, @MainActor, Foundation Models, MLX,\nCore ML, coremltools, model conversion, MLX, MLXLLM, MLXVLM, MLXLMCommon,\nLLMModelFactory, ChatSession, GenerateParameters, LoRA, Hugging Face models,\nKeychain, CryptoKit, biometric auth,\nApp Store submission, testing, SwiftData, @Model, ModelContainer, @Query,\npersistence, schema migration, visionOS, RealityKit, ARKit, immersive spaces,\nspatial computing, StoreKit, in-app purchases, subscriptions, Product,\nTransaction, performance profiling, Instruments, MetricKit, hang detection,\nlaunch time, memory optimization, Meta Wearables DAT, or any iOS/macOS/visionOS\napplication code:\n\n1. Delegate to the swift-lead agent\n2. The swift-lead will determine which specialist agents are needed\n3. Do NOT write Swift UI code without mobile-a11y-specialist review\n4. Do NOT write concurrent code without concurrency-specialist review\n5. Do NOT handle credentials or encryption without swift-security-specialist review\n6. Do NOT submit to App Store without app-review-guardian review\n7. Do NOT convert or optimize ML models without coreml-specialist review\n8. Do NOT use MLX Swift, MLXLLM, or MLXVLM without mlx-specialist review\n9. Do NOT write SwiftData models or queries without swiftdata-specialist review\n10. Do NOT build visionOS or RealityKit features without visionos-specialist review\n11. Do NOT implement in-app purchases without storekit-specialist review\n12. Do NOT optimize performance without performance-specialist review\n\nCRITICAL RULES:\n- For NEW projects or features: Enter plan mode FIRST. Design architecture before writing code.\n- NEVER create mock, placeholder, or stub implementations. All code must be real and functional.\n- Use built-in SwiftUI features instead of building custom replacements.\n- Settings screens MUST use Form { Section { Toggle/Picker/Stepper } }. Not custom VStacks.\n- macOS preferences MUST use the Settings { } scene. Not a custom window.\n- Persistence MUST use @AppStorage for UserDefaults. Not manual UserDefaults.standard calls.\n- Use .searchable, .refreshable, PhotosPicker, ShareLink, SubscriptionStoreView, .confirmationDialog.\n- Use Swift compiler synthesis (Codable, Equatable, Hashable) instead of manual implementations.\n\nIf the task does not involve any Swift or Apple platform code, proceed normally.\nHOOK_OUTPUT"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": {
+          "toolName": "Write|Edit"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat <<'HOOK_OUTPUT'\nREMINDER: If you just wrote or edited Swift code, verify:\n- NO MOCKS: Every function, view, and data source must be real. No placeholders or stubs.\n- BUILT-INS: Are you reimplementing something SwiftUI provides? Use Form, @AppStorage, Settings,\n  .searchable, .refreshable, PhotosPicker, ShareLink, SubscriptionStoreView instead.\n- SYNTHESIS: Are you writing Codable CodingKeys, == operators, or hash(into:) manually?\n  Remove them. The compiler synthesizes these automatically.\n- Concurrency: All async/await, actor, and Sendable usage follows Swift 6.2 strict concurrency rules\n- SwiftUI: @Observable used (not ObservableObject on iOS 17+), NavigationStack (not NavigationView)\n- Accessibility: VoiceOver labels, Dynamic Type, and accessibility traits on all interactive elements\n- SwiftData: @Model schemas have explicit delete rules, indexes, and migration plans\n- Security: No hardcoded secrets, Keychain for sensitive data, ATS not disabled\n- Performance: No synchronous I/O on main thread, images downsampled, lazy containers for large lists\nHOOK_OUTPUT"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat <<'HOOK_OUTPUT'\nVALIDATION: Specialist output received. Before presenting to user:\n- Check for conflicts between specialist recommendations\n- Verify accessibility was not skipped for any UI code\n- Verify concurrency safety was not skipped for any async code\n- Ensure the response addresses the original task completely\n- REJECT any mock, placeholder, or stub implementations. All code must be real.\n- REJECT custom implementations of things SwiftUI provides built-in\n  (Form, @AppStorage, .searchable, .refreshable, PhotosPicker, ShareLink, etc.)\nHOOK_OUTPUT"
+          }
+        ]
+      }
+    ]
+  }
+}

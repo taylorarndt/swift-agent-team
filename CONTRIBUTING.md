@@ -1,4 +1,4 @@
-# Contributing to Swift Agent Team
+# Contributing to Swift Agents
 
 First off, thank you for considering contributing. Modern Swift deserves modern AI tooling, and every improvement to these agents helps developers ship better code.
 
@@ -6,7 +6,7 @@ First off, thank you for considering contributing. Modern Swift deserves modern 
 
 ### Report agent gaps
 
-The most valuable contributions are **agent gap reports** — cases where an agent missed something, gave wrong advice, or enforced an outdated pattern. These reports directly improve agent instructions. Use the [Agent Gap](https://github.com/taylorarndt/swift-agent-team/issues/new?template=agent_gap.yml) issue template.
+The most valuable contributions are **agent gap reports** — cases where an agent missed something, gave wrong advice, or enforced an outdated pattern. These reports directly improve agent instructions. Use the [Agent Gap](https://github.com/Techopolis/swift-agents/issues/new?template=agent_gap.yml) issue template.
 
 ### Improve agent instructions
 
@@ -54,4 +54,4 @@ This project follows a [Code of Conduct](CODE_OF_CONDUCT.md). By participating, 
 
 ## Questions?
 
-Open a [discussion](https://github.com/taylorarndt/swift-agent-team/discussions) or file an issue. No question is too basic.
+Open a [discussion](https://github.com/Techopolis/swift-agents/discussions) or file an issue. No question is too basic.

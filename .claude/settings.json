@@ -1,14 +1,1 @@
-{
-  "hooks": {
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": ".claude/hooks/swift-team-eval.sh"
-          }
-        ]
-      }
-    ]
-  }
-}
+{}

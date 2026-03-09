@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat <<'HOOK_OUTPUT'\nINSTRUCTION: SWIFT AGENTS CHECK\nIf this task involves Swift, SwiftUI, UIKit, async/await, actors, Core ML,\nMLX, Foundation Models, SwiftData, StoreKit, visionOS, RealityKit, Keychain,\nCryptoKit, App Store submission, or any iOS/macOS/visionOS application code:\n\n1. Delegate to the swift-lead agent.\n2. The swift-lead determines which specialists review the task.\n3. Do NOT write UI code without mobile-a11y-specialist review.\n4. Do NOT write concurrent code without concurrency-specialist review.\n5. NEVER create mock, placeholder, or stub implementations.\n6. Use built-in SwiftUI features instead of custom replacements.\n\nIf the task does not involve Swift or Apple platform code, proceed normally.\nHOOK_OUTPUT"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat <<'HOOK_OUTPUT'\nVALIDATION: Before presenting specialist output to user:\n- Check for conflicts between specialist recommendations\n- Verify accessibility was reviewed for UI code\n- Reject any mock, placeholder, or stub implementations\nHOOK_OUTPUT"
+          }
+        ]
+      }
+    ]
+  }
+}

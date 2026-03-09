@@ -1,5 +1,5 @@
 #!/bin/bash
-# Swift Agent Team Uninstaller
+# Swift Agents Uninstaller
 # Built by Taylor Arndt - https://github.com/taylorarndt
 #
 # Usage:
@@ -19,7 +19,7 @@ fi
 
 if [ -z "$choice" ]; then
   echo ""
-  echo "  Swift Agent Team Uninstaller"
+  echo "  Swift Agents Uninstaller"
   echo "  ============================"
   echo ""
   echo "  Where would you like to uninstall from?"
@@ -64,18 +64,18 @@ fi
 
 echo ""
 echo "  Removing hooks..."
-if [ -f "$TARGET_DIR/hooks/swift-team-eval.sh" ]; then
-  rm "$TARGET_DIR/hooks/swift-team-eval.sh"
-  echo "    - swift-team-eval.sh"
+if [ -f "$TARGET_DIR/hooks/SWIFT AGENTS CHECK.sh" ]; then
+  rm "$TARGET_DIR/hooks/SWIFT AGENTS CHECK.sh"
+  echo "    - SWIFT AGENTS CHECK.sh"
 fi
-if [ -f "$TARGET_DIR/hooks/swift-team-eval.ps1" ]; then
-  rm "$TARGET_DIR/hooks/swift-team-eval.ps1"
-  echo "    - swift-team-eval.ps1"
+if [ -f "$TARGET_DIR/hooks/SWIFT AGENTS CHECK.ps1" ]; then
+  rm "$TARGET_DIR/hooks/SWIFT AGENTS CHECK.ps1"
+  echo "    - SWIFT AGENTS CHECK.ps1"
 fi
 
 # Try to remove hook from settings.json
 echo ""
-if [ -f "$SETTINGS_FILE" ] && grep -q "swift-team-eval" "$SETTINGS_FILE" 2>/dev/null; then
+if [ -f "$SETTINGS_FILE" ] && grep -q "SWIFT AGENTS CHECK" "$SETTINGS_FILE" 2>/dev/null; then
   if command -v python3 &>/dev/null; then
     CLEANED=$(python3 -c "
 import json, sys
@@ -86,7 +86,7 @@ try:
         groups = settings['hooks']['UserPromptSubmit']
         settings['hooks']['UserPromptSubmit'] = [
             g for g in groups
-            if not any('swift-team-eval' in h.get('command', '') for h in g.get('hooks', []))
+            if not any('SWIFT AGENTS CHECK' in h.get('command', '') for h in g.get('hooks', []))
         ]
         if not settings['hooks']['UserPromptSubmit']:
             del settings['hooks']['UserPromptSubmit']
@@ -101,11 +101,11 @@ except Exception as e:
       echo "  Removed hook from settings.json."
     } || {
       echo "  Could not auto-remove hook from settings.json."
-      echo "  Remove the UserPromptSubmit hook referencing swift-team-eval manually."
+      echo "  Remove the UserPromptSubmit hook referencing SWIFT AGENTS CHECK manually."
     }
   else
     echo "  NOTE: The hook entry in settings.json was not removed."
-    echo "  Remove the UserPromptSubmit hook referencing swift-team-eval.sh"
+    echo "  Remove the UserPromptSubmit hook referencing SWIFT AGENTS CHECK.sh"
     echo "  from your settings.json manually."
   fi
 fi
@@ -116,7 +116,7 @@ if [ "$choice" = "2" ]; then
   echo "  Removing auto-update..."
 
   # Remove LaunchAgent (macOS)
-  PLIST_FILE="$HOME/Library/LaunchAgents/com.taylorarndt.swift-agent-team-update.plist"
+  PLIST_FILE="$HOME/Library/LaunchAgents/com.techopolis.swift-agents-update.plist"
   if [ -f "$PLIST_FILE" ]; then
     launchctl bootout "gui/$(id -u)" "$PLIST_FILE" 2>/dev/null || true
     rm "$PLIST_FILE"
@@ -124,16 +124,16 @@ if [ "$choice" = "2" ]; then
   fi
 
   # Remove cron job (Linux)
-  if crontab -l 2>/dev/null | grep -q "swift-agent-team-update"; then
-    crontab -l 2>/dev/null | grep -v "swift-agent-team-update" | crontab -
+  if crontab -l 2>/dev/null | grep -q "swift-agents-update"; then
+    crontab -l 2>/dev/null | grep -v "swift-agents-update" | crontab -
     echo "    - Cron job removed"
   fi
 
   # Remove update script, cache, version file, and log
-  rm -f "$TARGET_DIR/.swift-agent-team-update.sh"
-  rm -f "$TARGET_DIR/.swift-agent-team-version"
-  rm -f "$TARGET_DIR/.swift-agent-team-update.log"
-  rm -rf "$TARGET_DIR/.swift-agent-team-repo"
+  rm -f "$TARGET_DIR/.swift-agents-update.sh"
+  rm -f "$TARGET_DIR/.swift-agents-version"
+  rm -f "$TARGET_DIR/.swift-agents-update.log"
+  rm -rf "$TARGET_DIR/.swift-agents-repo"
   echo "    - Update files cleaned up"
 fi
 

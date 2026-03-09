@@ -1,0 +1,8 @@
+{
+  "agents": {
+    "model": "sonnet",
+    "swift-lead": {
+      "model": "sonnet"
+    }
+  }
+}

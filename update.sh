@@ -1,5 +1,5 @@
 #!/bin/bash
-# Swift Agent Team - Update Script
+# Swift Agents - Update Script
 # Built by Taylor Arndt - https://github.com/taylorarndt
 #
 # Checks for updates from GitHub and installs them.
@@ -12,10 +12,10 @@
 
 set -e
 
-REPO_URL="https://github.com/taylorarndt/swift-agent-team.git"
-CACHE_DIR="$HOME/.claude/.swift-agent-team-repo"
-VERSION_FILE="$HOME/.claude/.swift-agent-team-version"
-LOG_FILE="$HOME/.claude/.swift-agent-team-update.log"
+REPO_URL="https://github.com/Techopolis/swift-agents.git"
+CACHE_DIR="$HOME/.claude/.swift-agents-repo"
+VERSION_FILE="$HOME/.claude/.swift-agents-version"
+LOG_FILE="$HOME/.claude/.swift-agents-update.log"
 
 # Parse flags
 SILENT=false
@@ -62,7 +62,7 @@ if [ -d "$CACHE_DIR/.git" ]; then
   git reset --hard origin/main --quiet 2>/dev/null
   log "Pulled latest changes."
 else
-  log "Downloading swift-agent-team..."
+  log "Downloading swift-agents..."
   mkdir -p "$(dirname "$CACHE_DIR")"
   git clone --quiet "$REPO_URL" "$CACHE_DIR" 2>/dev/null
   log "Repository cloned."
