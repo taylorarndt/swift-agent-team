@@ -7,7 +7,7 @@
 # These skills provide reference knowledge that the Swift Agents agents
 # rely on. Agents handle the review workflow. Skills provide the deep knowledge.
 #
-# To add a skill: submit a PR to awesome-ios-ai with your skill added below.
+# To add a skill: submit a PR to swift-agents with your skill added below.
 # Requirements: must complement an existing agent, not duplicate one.
 
 avdlee/swift-concurrency-agent-skill@swift-concurrency Swift 6.2 concurrency reference (actors, Sendable, async/await)
