@@ -5,15 +5,23 @@
 ## Which agents are affected?
 
 - [ ] swift-lead
-- [ ] concurrency-specialist
-- [ ] foundation-models-specialist
-- [ ] on-device-ai-architect
-- [ ] mobile-a11y-specialist
-- [ ] swiftui-specialist
 - [ ] app-review-guardian
-- [ ] testing-specialist
+- [ ] concurrency-specialist
+- [ ] coreml-specialist
+- [ ] foundation-models-specialist
+- [ ] meta-glasses-sdk-specialist
+- [ ] mlx-specialist
+- [ ] mobile-a11y-specialist
+- [ ] on-device-ai-architect
+- [ ] performance-specialist
+- [ ] storekit-specialist
 - [ ] swift-security-specialist
+- [ ] swiftdata-specialist
+- [ ] swiftui-specialist
+- [ ] testing-specialist
+- [ ] visionos-specialist
 - [ ] Hook scripts
+- [ ] Installer or companion skills
 - [ ] Documentation only
 
 ## Checklist
