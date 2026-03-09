@@ -1,0 +1,16 @@
+# Companion skills for Swift Agents
+# Maintained by the community at https://github.com/Techopolis/awesome-ios-ai
+#
+# Format: <owner/repo@skill-name> <description>
+# The installer fetches this file and offers to install all listed skills.
+#
+# These skills provide reference knowledge that the Swift Agents agents
+# rely on. Agents handle the review workflow. Skills provide the deep knowledge.
+#
+# To add a skill: submit a PR to awesome-ios-ai with your skill added below.
+# Requirements: must complement an existing agent, not duplicate one.
+
+avdlee/swift-concurrency-agent-skill@swift-concurrency Swift 6.2 concurrency reference (actors, Sendable, async/await)
+dimillian/skills@swiftui-liquid-glass iOS 26+ Liquid Glass API reference
+dimillian/skills@swiftui-ui-patterns SwiftUI component patterns (TabView, NavigationStack, Sheets)
+dimillian/skills@ios-debugger-agent Simulator build, run, and debug via XcodeBuildMCP

@@ -557,7 +557,7 @@ install_companion_skills() {
   echo ""
 
   # Fetch the recommended skills list from awesome-ios-ai on GitHub
-  SKILLS_URL="https://raw.githubusercontent.com/Techopolis/awesome-ios-ai/main/companion-skills.txt"
+  SKILLS_URL="https://raw.githubusercontent.com/Techopolis/swift-agents/main/companion-skills.txt"
   SKILLS_LIST=""
 
   if command -v curl &>/dev/null; then
