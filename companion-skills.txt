@@ -11,8 +11,8 @@
 # Requirements: must complement an existing agent, not duplicate one.
 
 avdlee/swift-concurrency-agent-skill@swift-concurrency Swift 6.2 concurrency reference (actors, Sendable, async/await)
-avdlee/swift-testing-agent-skill@swift-testing Swift Testing framework (#expect, #require, traits, parameterized tests)
-avdlee/swiftui-agent-skill@swiftui State management, view composition, performance, Liquid Glass
+avdlee/swift-testing-agent-skill@swift-testing-expert Swift Testing framework (#expect, #require, traits, parameterized tests)
+avdlee/swiftui-agent-skill@swiftui-expert-skill State management, view composition, performance, Liquid Glass
 dpearson2699/swift-ios-skills@apple-on-device-ai Foundation Models, on-device inference, Apple Intelligence
 dpearson2699/swift-ios-skills@ios-accessibility VoiceOver, accessibility modifiers, Dynamic Type patterns
 dpearson2699/swift-ios-skills@swiftdata @Model schemas, @Query, predicates, relationships, migration
