@@ -11,6 +11,12 @@
 # Requirements: must complement an existing agent, not duplicate one.
 
 avdlee/swift-concurrency-agent-skill@swift-concurrency Swift 6.2 concurrency reference (actors, Sendable, async/await)
+avdlee/swift-testing-agent-skill@swift-testing Swift Testing framework (#expect, #require, traits, parameterized tests)
+avdlee/swiftui-agent-skill@swiftui State management, view composition, performance, Liquid Glass
+dpearson2699/swift-ios-skills@apple-on-device-ai Foundation Models, on-device inference, Apple Intelligence
+dpearson2699/swift-ios-skills@ios-accessibility VoiceOver, accessibility modifiers, Dynamic Type patterns
+dpearson2699/swift-ios-skills@swiftdata @Model schemas, @Query, predicates, relationships, migration
 dimillian/skills@swiftui-liquid-glass iOS 26+ Liquid Glass API reference
 dimillian/skills@swiftui-ui-patterns SwiftUI component patterns (TabView, NavigationStack, Sheets)
+dimillian/skills@swiftui-performance-audit Diagnose slow rendering, janky scrolling, excessive view updates
 dimillian/skills@ios-debugger-agent Simulator build, run, and debug via XcodeBuildMCP
